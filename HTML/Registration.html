@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel = "icon" href = "smdbms_icon.png" 
+        type = "image/x-icon">
+  <link rel="stylesheet" href="Registration.css"/>
+  <title>STUDY_MATERIAL_DATABASE_MANAGEMENT_SYSTEM</title>     
+</head>
+
+<body>
+     <h3>STUDY MATERIAL DATABASE MANAGEMENT SYSTEM</h3>
+  <form action="" method="POST" id="registrationform">
+    <h2>REGISTER HERE!!</h2>
+    <div class="alert">Message Sent</div>
+    <fieldset>
+      <!-- Section 1 -->
+      <legend><span class="section">1</span>SIGN-IN DETAILS</legend>
+      <label class="" for="name">Name:</label>
+      <input type="text" name="name" value="" id="name" placeholder="ENTER FULL NAME(as per your college ID)" required  />
+
+      <label class="" for="email">Email:</label>
+      <input type="email" name="email" value="" id="email" placeholder="abc@xyz.com(enter valid email ID)" required />
+
+      <label for="password">Password:</label>
+        <input type="password" name="password" value="" id="password" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{6,}$"      title="Must contain at least 8 letters characters one uppercase letter, one lowercase letter, one number and one symbol " required>
+        <input type="checkbox"  onclick="Toggle()">
+        s<b>Show Password</b><br><br>
+    
+        
+        
+      
+      </fieldset>
+      
+
+    <fieldset>
+      <!-- section 2 -->
+      <legend><span class="section">2</span>STUDENT INFORMATION</legend>
+
+      <label for="gyear">Graduation year</label>
+      <input type="month" name="gyear" value="" id="gyear" placeholder="2017-21" required/>
+
+      <label for="Branch">Branch:</label>
+      <select name="Branch" id="Branch" required>
+        <optgroup label="Field of Graduation">
+          <option value="It" id="frontend">Information technology</option>
+          <option value="bca" id="backend">BCA</option>
+        </optgroup>
+      </select>
+      <br /><br />
+
+      <label for="college_ID">Enter your Enrollment Number</label>
+      <input type="college_ID" name="college_ID" value="" id="college_ID" placeholder="Enter your Enrollment number" pattern="[0-9]{16}"required/>
+ 
+      <br>
+
+      <button type="submit" sendMessage()>REGISTER</button>
+
+      <br>
+      <br>
+      <br>
+
+      <a href="Login.html"> Already Registered? Sign-In.</a>
+
+      <br>
+      <br>
+      <br>
+      
+      </fieldset>
+  </form>
+  
+  <br><br>
+
+  <footer>
+    <div class="footer-basic">
+         <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Home</a></li>
+        <li class="list-inline-item"><a href="#">Services</a></li>
+        <li class="list-inline-item"><a href="#">About</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+    </ul>
+    <p class="copyright">Company Name © 2018</p>
+  </div>
+  </footer>
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>  
+  <script src="Registration.js" defer></script>
+
+</body>
+</html>
